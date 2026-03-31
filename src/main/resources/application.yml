@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: '@environment@'
+  datasource:
+    url: xxx
+    username: xxx
+    password: xxx
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+demo:
+  name: xxx
