@@ -5,6 +5,7 @@ import me.hmhb.entity.dto.User;
 import me.hmhb.mapper.TestMapper;
 import me.hmhb.service.TestService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -14,5 +15,11 @@ public class TestServiceImpl extends ServiceImpl<TestMapper, User> implements Te
     @Override
     public List<User> getUsers() {
         return baseMapper.selectList(null);
+    }
+
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void insertUser(User user) {
+        throw new RuntimeException("insert user error");
     }
 }

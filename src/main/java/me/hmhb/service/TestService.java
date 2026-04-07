@@ -8,4 +8,5 @@ import java.util.Map;
 
 public interface TestService extends IService<User> {
     List<User> getUsers();
+    void insertUser(User user);
 }

@@ -13,5 +13,4 @@ public class User {
     Integer id;
     String name;
     int age;
-    //String desc;
 }
