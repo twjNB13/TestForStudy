@@ -1,27 +1,14 @@
 package me.hmhb;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
+    public static void main(String[] args) {
 
-    public volatile static int a = 1;
-
-    public static void main(String[] args) throws InterruptedException {
-
-        System.out.println(new ArrayList<Integer>() instanceof List<Integer>);
-    }
-
-    interface A {
-        void test();
-    }
-    
-    class B implements A {
-
-        @Override
-        public void test() {
-            System.out.println("test");
-        }
+        List<String> list = Arrays.asList("a", "b", "c");
+        list.addFirst("d");
+        list.addLast("e");
+        
     }
 }
