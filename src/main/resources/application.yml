@@ -1,3 +1,5 @@
 spring:
+  application:
+    name: my-test-app
   profiles:
     active: '@environment@'
